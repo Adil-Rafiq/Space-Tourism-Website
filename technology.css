@@ -1,0 +1,94 @@
+main {
+    padding-inline: 0 !important;
+}
+main * {
+    --flow-space: 2.3rem;
+}
+main > *:not(img) {
+    padding-inline: 1rem !important;
+}
+
+
+/* Layouts */
+
+.grid-container--technology .numbered-title {
+    grid-area: title;
+}
+.number-indicators {
+    grid-area: dots;
+}
+.grid-container--technology > img {
+    grid-area: image;
+}
+.grid-container--technology > .launch-info {
+    grid-area: content;
+}
+
+/* mobile */
+.technology {
+    background-image: url(Files/space-tourism-website-main/starter-code/assets/technology/background-technology-mobile.jpg);
+}
+
+.grid-container--technology {
+    grid-template-areas: 
+        'title'
+        'image'
+        'dots'
+        'content'
+        ;
+}
+
+
+
+/* tablet */
+@media screen and (min-width: 35rem) {
+    .number-indicators {
+        margin-top: 4.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .technology {
+        background-image: url(Files/space-tourism-website-main/starter-code/assets/technology/background-technology-tablet.jpg);
+    }
+
+    .grid-container > h1 {
+        place-self: start;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 47rem) {
+    .technology {
+        background-image: url(Files/space-tourism-website-main/starter-code/assets/technology/background-technology-desktop.jpg);
+    }
+    
+    .grid-container--technology {
+        grid-template-columns: minmax(1rem,1fr) minmax(0,7rem) minmax(0,35rem) minmax(0,30rem) minmax(1rem, 1fr);
+        grid-template-areas: 
+        '. title title . .'
+        '. . . image image'
+        '. dots content image image'
+        '. dots content image image'
+        '. . . image image'
+        ;
+
+        justify-items: start;
+        column-gap: 1rem;
+    }
+
+    .grid-container--technology > img {
+        place-self: end;
+    }
+
+    .number-indicators {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #spaceport-info {
+        /* grid-row: 3/6; */
+        align-self: stretch;
+    }
+}

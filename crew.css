@@ -1,0 +1,93 @@
+main * {
+    --flow-space: 2.5rem;
+}
+
+.crew {
+    background-image: url(Files/space-tourism-website-main/starter-code/assets/crew/background-crew-mobile.jpg);
+}
+
+
+/* -------- Layout ------------- */
+/* mobile */
+
+.grid-container--crew {
+    grid-template-areas: 
+    'title'
+    'image'
+    'dots'
+    'content'
+    ;
+}
+
+.numbered-title {
+    grid-area: title;
+}
+
+.grid-container--crew > img {
+    grid-area: image;
+    max-width: 60%;
+    border-bottom: 2px solid hsl( var(--clr-white) / .1);
+}
+
+.grid-container--crew > .dot-indicators {
+    grid-area: dots;
+}
+
+.grid-container--crew > .crew-info {
+    grid-area: content;
+}
+
+
+/* tablet */
+@media screen and (min-width: 35rem) {
+
+    .crew {
+        background-image: url(Files/space-tourism-website-main/starter-code/assets/crew/background-crew-tablet.jpg);
+    }
+ 
+    .grid-container--crew {
+        grid-template-areas: 
+        'title'
+        'content'
+        'dots'
+        'image'
+        ;
+    }
+
+    .grid-container {
+        padding-bottom: 0;
+    }
+    .numbered-title {
+        place-self: start;
+    }
+
+    .grid-container--crew > img {
+        align-self: end;
+        border-bottom: 0;
+    }
+}
+
+
+/* desktop */
+@media screen and (min-width: 47rem) {
+
+    .crew {
+        background-image: url(Files/space-tourism-website-main/starter-code/assets/crew/background-crew-desktop.jpg);
+    }
+
+    .grid-container--crew {
+        grid-template-columns: minmax(1rem, 1fr) minmax(0,53rem) minmax(0,27rem) minmax(1rem, 1fr);
+        grid-template-areas: 
+        '. title image .'
+        '. . image .'
+        '. content image .'
+        '. dots image .'
+        '. . image .'
+        ;
+        justify-items: start;
+    }
+
+    .grid-container--crew > img {
+        max-width: 90%;
+    }
+}

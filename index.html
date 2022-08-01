@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Files/space-tourism-website-main/starter-code/assets/favicon-32x32.png"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Home | Space Tourism</title>
+  </head>
+
+  <body class="home">
+    <header class="primary-nav-header flex">
+      <div class="logo">
+        <img src="Files/shared/logo.svg" alt="logo" />
+      </div>
+
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav>
+        <ul
+          id="primary-nav"
+          class="primary-nav flex underline-indicators"
+          data-visible="false"
+        >
+          <li class="active">
+            <a href="index.html" class="ff-sans-cond uppercase letter-spacing-2"
+              ><strong>00</strong>Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="destination.html"
+              class="ff-sans-cond uppercase letter-spacing-2"
+              ><strong>01</strong>Destination</a
+            >
+          </li>
+          <li>
+            <a href="crew.html" class="ff-sans-cond uppercase letter-spacing-2"
+              ><strong>02</strong>Crew</a
+            >
+          </li>
+          <li>
+            <a
+              href="technology.html"
+              class="ff-sans-cond uppercase letter-spacing-2"
+              ><strong>03</strong>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid-container grid-container--home flow">
+      <div>
+        <h1 class="fs-500 ff-sans-cond text-accent uppercase letter-spacing-1">
+          SO, YOU WANT TO TRAVEL TO
+          <span class="fs-900 ff-serif text-white" style="display: block"
+            >SPACE</span
+          >
+        </h1>
+        <p class="text-accent">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+
+      <div class="explore-btn">
+        <a
+          href="destination.html"
+          class="fs-600 ff-serif text-dark bg-white uppercase letter-spacing-2"
+        >
+          Explore
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
